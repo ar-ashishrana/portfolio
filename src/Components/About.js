@@ -6,7 +6,7 @@ const About = (props) => {
     
     return (
         <>
-        <section className="sec about">
+        <section className="sec about" id="about">
             <h2 className="title">{props.title}</h2>
                 <div className="max-width">
                     <div className="sec-content about-content">

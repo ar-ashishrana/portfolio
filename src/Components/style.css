@@ -7,6 +7,9 @@
     text-decoration: none;
     box-sizing: border-box;
 }
+html{
+    scroll-behavior: smooth;
+}
 .d-inline{
     display: inline-block;
 }
@@ -53,6 +56,7 @@
     display: inline-block;
 }
 .menu li a{
+    display: block;
     color: #fff;
     font-size: 18px!important;
     font-weight: 500!important;
@@ -71,6 +75,29 @@
     font-size: 23px;
     cursor: pointer;
     display: none;
+}
+.scroll-up-btn{
+    position: fixed;
+    height: 45px;
+    width: 45px;
+    background: crimson;
+    right: 30px;
+    bottom: 30px;
+    text-align: center;
+    line-height: 45px;
+    color: #fff;
+    z-index: 9999;
+    font-size: 30px;
+    border-radius: 6px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3 ease;
+}
+.scroll-up-btn.show{
+    bottom: 20px;
+    opacity: 1;
+    pointer-events: auto;
 }
 /* home section styling starts */
 .home{
@@ -118,7 +145,7 @@
 section{
     padding-top: 20px;
 }
-.sec{
+.sec, .footer{
     font-family: 'Poppins', sans-serif;
     margin: 50px 0px;
 }
@@ -202,49 +229,53 @@ section{
     border-radius: 6px;
 }
 /* Service Section styling starts here */
-.services{
+.services, .team{
+    padding-top: 50px;
     color:#fff;
     background-color: #111;
     padding-bottom: 4%;
 }
-.services .title::before{
+.services .title::before, .team .title::before{
     background-color: #fff;
 }
-.services .title::after{
-    background-color: #111;
-    content: "What I provide";
-}
-.services .service-content .card {
+.card{
     width: calc(33% - 20px);
+    color: #fff!important;;
     background-color: #222;
     text-align: center;
     border-radius: 6px;
     padding: 20px 25px;
     cursor: pointer;
     margin-bottom: 1%;
+    overflow: hidden;
     transition: all 0.3s ease;
+}
+.card .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+ .card .box{
+    transition: all 0.3s ease;
+}
+.card:hover{
+    background-color: crimson;
+}
+.card:hover .box {
+    transform: scale(1.05);
+}
+
+.services .title::after{
+    background-color: #111;
+    content: "What I provide";
 }
 .services .service-content .card i{
     font-size: 50px;
     color: crimson;
     transition: all 0.3s ease;
 }
-.services .service-content .card .text{
-    font-size: 25px;
-    font-weight: 500;
-    margin: 10px 0 7px 0;
-}
-.services .service-content .card .box{
-    transition: all 0.3s ease;
-}
-.services .service-content .card:hover{
-    background-color: crimson;
-}
 .services .service-content .card:hover i{
     color: #fff;
-}
-.services .service-content .card:hover .box {
-    transform: scale(1.05);
 }
 /* skills section starts here */
 .skills .title::after{
@@ -310,6 +341,105 @@ section{
 /* Team section styling starts here */
 .team .title::after{
     content: "Here is my Team";
+    background-color: #111;
+}
+.card img{
+    width: 300px;
+    height: auto;
+}
+/* Contact section styling starts here */
+.contact .title::after{
+    content:"Contact us";
+}
+.icons{
+    margin: 10px 0px;
+}
+.row{
+    display: flex;
+    height: 95px;
+    align-items: center;
+}
+.row .info{
+    margin-left: 30px;
+}
+.row i{
+    font-size: 25px;
+    color: crimson;
+}
+.info .head{
+    font-weight: 600;
+}
+.row .info .sub-title{
+    color: #333;
+}
+.right form .fields{
+    display: flex;
+}
+.right .fields .field, .right form .field{
+    height:45px;
+    width:100%;
+    margin-bottom: 15px;
+}
+.right form .textarea textarea{
+    height: 180px;
+    width: 100%;
+}
+.right form .name{
+    margin-right: 10px;
+}
+.right form .email{
+    margin-left: 10px;
+}
+.contact-content .right{
+    padding-left:20px;
+}
+form .field input{
+    width:100%;
+    height: 100%;
+    display: block;
+}
+form .field input, .right form textarea{
+    height: 100%;
+    width: 100%;
+    border:1px solid crimson;
+    border-radius: 6px;
+    outline: none;
+    padding: 0px 15px;
+    font-size: 17px;
+    font-family: 'poppins', sans-serif;
+}
+.right form .textarea textarea{
+    padding-top: 15px;
+    resize: none;
+}
+.right form .button{
+    height: 50px;
+    width: 170px;
+}
+.right form .button input{
+    width: 100%;
+    height: 100%;
+    font-size: 18px;
+    border: 2px solid crimson;
+    border-radius: 6px;
+    color:#fff;
+    background-color: crimson;
+}
+.right form .button input:hover{
+    color:crimson;
+    background-color: #fff;
+}
+/* footer section styling starts here */
+.footer{
+    background: #111;
+    color: #fff;
+    text-align: center;
+    padding: 20px 23px;
+    margin-bottom: 0px;
+}
+.footer a{
+    text-decoration: none;
+    color: crimson;
 }
 /* Responsive media query starts here */
 @media(max-width: 1300px) {
@@ -317,10 +447,24 @@ section{
         margin-left: 0px; 
     }
 }
+@media(max-width: 1200px) {
+    .card img{
+        width: 250px;
+        height: auto;
+    }
+
+}
 @media(max-width: 1104px) {
     .about .about-content .left img{
         width: 350px;
         height: 350px;
+    }
+    .card{
+        margin: 0px;
+    }
+    .card img{
+        width: 220px;
+        height: auto;
     }
 }
 @media(max-width: 991px) {
@@ -375,7 +519,7 @@ section{
 .max-width {
     max-width: 900px;
 }
-.about .about-content .column, .skills .column{
+ .column{
     width: 100%;
 }
 .about .about-content .left{
@@ -390,14 +534,21 @@ section{
 .skills-content .left, .skills-content .right{
     width: 100%;
     align-items: center;
-    margin: 0 auto;
+    margin: 0px;
 }
 .skills-content .left{
     padding-right: 0px;
 }
-.services .service-content .card {
+.card {
     width: calc(50% - 10px);
     margin-bottom: 20px;
+}
+.sec-content .right, .sec-content .left{
+    width: 100%;
+    padding-left: 0px;
+}
+.column .left{
+    padding: 0%;
 }
 }
 @media(max-width: 690px) {
@@ -418,7 +569,17 @@ section{
         width: 250px;
         height: auto;
     }
-    .services .service-content .card {
+    .card img{
+        width: 350px;
+    }
+    .card {
         width: 100%;
+    }
+    .sec-content .right, .sec-content .left{
+        width: 100%;
+        padding: 0px!important;
+    }
+    .left{
+        padding: 0%;
     }
 }
