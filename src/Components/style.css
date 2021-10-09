@@ -1,0 +1,424 @@
+/* classes for all */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;1,500&family=Ubuntu:wght@400;500;700&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+.d-inline{
+    display: inline-block;
+}
+
+.max-width {
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+/* Navbar styling */
+
+.navbar{
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    padding: 30px 0px;
+    font-family: 'Ubuntu', sans-serif;
+    transition: 0.2s all ease;
+}
+.sticky{
+    color: #fff;;
+    padding: 15px 0px;
+    background-color: crimson;
+}
+.max-width {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .logo a{
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+}
+.sticky .logo span {
+    color: #fff!important;
+}
+
+.navbar .logo span{
+    color: crimson;
+}
+.menu li{
+    list-style: none;
+    display: inline-block;
+}
+.menu li a{
+    color: #fff;
+    font-size: 18px!important;
+    font-weight: 500!important;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+}
+.sticky .menu li a:hover{
+    color: #fff!important;
+}
+.menu li a:hover{
+    color: crimson;
+}
+/* Menu bar styling */
+.menu-bar{
+    color: #fff;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+/* home section styling starts */
+.home{
+    display: flex;
+    background: url('https://images.unsplash.com/photo-1480506132288-68f7705954bd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=920&q=80')  no-repeat center ;
+    background-size: 100% 100%;
+    color: #fff;
+    height: 100vh;
+    min-height: 500px;
+    font-family: 'Ubuntu', sans-serif;
+}
+.home .max-width{
+    margin: auto 0 auto 40px;
+}
+.home-content .text-1{
+    font-size: 27px;
+}
+.home-content .text-2{
+    font-size: 75px;
+    font-weight: 600;
+    margin-left: -3px;
+}
+.home-content .text-3{
+    font-size: 40px;
+    margin:5px 0px;
+}
+.home-content .text-3 span{
+    color: crimson;
+    font-weight: 500;
+}
+.home-content a{
+    font-size: 23px;
+    padding: 10px 28px;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    color: #fff;
+    background-color: crimson;
+    transition: all 0.2s ease;
+}
+.home-content a:hover{
+    color: crimson;
+    background: none;
+}
+/* All similar code */
+section{
+    padding-top: 20px;
+}
+.sec{
+    font-family: 'Poppins', sans-serif;
+    margin: 50px 0px;
+}
+.title{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 50px;
+    padding-bottom: 20px;
+    font-family: 'Ubuntu', sans-serif;
+}
+.title::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 182px;
+    height: 3px;
+    background-color: #111;
+    transform: translateX(-50%);
+}
+.title::after{
+    position: absolute;
+    bottom: -14px;
+    left: 50%;
+    font-size: 20px;
+    padding: 5px;
+    color:crimson;
+    background-color: #fff;
+    transform: translateX(-50%);
+}
+.sec-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.sec-content .left{
+    width: 45%;
+}
+.sec-content .right{
+    width: 55%;
+}
+.sec-content .text {
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.sec-content .right .text span{
+    color:crimson;
+}
+.sec-content p{
+    text-align: justify;
+    font-size: 15px!important;
+    font-weight: normal;
+}
+.sec-content a{
+    font-size: 23px;
+    padding: 10px 28px;
+    border-radius: 6px;
+    display: inline-block;
+    border: 2px solid crimson;
+    color: #fff;
+    background-color: crimson;
+    transition: all 0.2s ease;
+    margin-bottom: 20px;
+}
+.sec-content a:hover{
+    color: crimson;
+    background: none;
+}
+/* About section styling starts here */
+.about .title::after{
+    content: "who I am";
+}
+.about .about-content .left img{
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+/* Service Section styling starts here */
+.services{
+    color:#fff;
+    background-color: #111;
+    padding-bottom: 4%;
+}
+.services .title::before{
+    background-color: #fff;
+}
+.services .title::after{
+    background-color: #111;
+    content: "What I provide";
+}
+.services .service-content .card {
+    width: calc(33% - 20px);
+    background-color: #222;
+    text-align: center;
+    border-radius: 6px;
+    padding: 20px 25px;
+    cursor: pointer;
+    margin-bottom: 1%;
+    transition: all 0.3s ease;
+}
+.services .service-content .card i{
+    font-size: 50px;
+    color: crimson;
+    transition: all 0.3s ease;
+}
+.services .service-content .card .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+.services .service-content .card .box{
+    transition: all 0.3s ease;
+}
+.services .service-content .card:hover{
+    background-color: crimson;
+}
+.services .service-content .card:hover i{
+    color: #fff;
+}
+.services .service-content .card:hover .box {
+    transform: scale(1.05);
+}
+/* skills section starts here */
+.skills .title::after{
+    content: "What I Know";
+}
+.skills-content .left{
+    padding-right: 20px;
+}
+.skills-content p{
+    text-align: justify;
+}
+.skills-content .bars{
+    margin-bottom: 15px;
+}
+.skills-content .info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.skills-content .right span{
+    font-weight: 600;
+    font-size: 18px;
+}
+.skills-content .right .line{
+    height: 6px;
+    background-color: lightgray;
+    width:100%;
+    position: relative;
+}
+.skills-content .right .line::before{
+    content: "";
+    position: absolute;
+    height:100%;
+    left:0;
+    top:0;
+    background-color: crimson;
+}
+.skills-content .right .HTML::before{
+    width: 90%;
+}
+.skills-content .right .Css::before{
+    width: 85%;
+}
+.skills-content .right .Javascript::before{
+    width: 70%;
+}
+.skills-content .right .PHP::before{
+    width: 65%;
+}
+.skills-content .right .React::before{
+    width: 60%;
+}
+.skills-content .right .MySql::before{
+    width: 75%;
+}
+.skills-content .right .Wordpress::before{
+    width: 70%;
+}
+.skills a{
+    font-size: 18px;
+    padding: 8px 15px;
+}
+/* Team section styling starts here */
+.team .title::after{
+    content: "Here is my Team";
+}
+/* Responsive media query starts here */
+@media(max-width: 1300px) {
+    .max-width {
+        margin-left: 0px; 
+    }
+}
+@media(max-width: 1104px) {
+    .about .about-content .left img{
+        width: 350px;
+        height: 350px;
+    }
+}
+@media(max-width: 991px) {
+    .max-width {
+        padding: 0 50px;
+    }
+}
+@media(max-width: 948px) {
+.navbar .menu-bar i.active::before{
+    content: "\f00d";
+}
+.navbar .menu{
+    position: fixed;
+    left: -100%;
+    top: 0%;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    text-align: center;
+    padding-top: 40px;
+    transition: 0.3s all ease;
+}
+.menu.active{
+    left: 0%!important;
+    
+}
+.navbar .menu li{
+    display: block;
+}
+.navbar .menu li a{
+    display: inline-block;
+    margin: 20px 0px;
+    font-size: 25px;
+}
+.menu-bar{
+    display: block;
+    z-index: 999;
+}
+.home-content .text-1{
+    font-size: 25px;
+}
+.home-content .text-2{
+    font-size: 70px;
+}
+.home-content .text-3{
+    font-size: 35px;
+}
+.home-content a{
+    font-size: 25px;
+    padding: 8px 26px;
+}
+.max-width {
+    max-width: 900px;
+}
+.about .about-content .column, .skills .column{
+    width: 100%;
+}
+.about .about-content .left{
+    display: flex;
+    justify-content: center;
+    margin: 0px auto 60px;
+}
+.about .about-content .right, .skills-content .left {
+    flex:100%;
+    align-items: center;
+}
+.skills-content .left, .skills-content .right{
+    width: 100%;
+    align-items: center;
+    margin: 0 auto;
+}
+.skills-content .left{
+    padding-right: 0px;
+}
+.services .service-content .card {
+    width: calc(50% - 10px);
+    margin-bottom: 20px;
+}
+}
+@media(max-width: 690px) {
+    .max-width {
+        padding: 0 23px;
+    }
+    .home-content .text-2{
+        font-size: 60px;
+    }
+    .home-content .text-3{
+        font-size: 32px;
+    }
+    .home-content a{
+        font-size: 23px;
+        padding: 7px 23px;
+    }
+    .about .about-content .left img{
+        width: 250px;
+        height: auto;
+    }
+    .services .service-content .card {
+        width: 100%;
+    }
+}
