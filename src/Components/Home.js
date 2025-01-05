@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
 import Typing from "./Typing";
-import Typed from 'typed.js';
+// import Typed from 'typed.js';
 
 const Home = () => {  
   return (

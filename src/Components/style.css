@@ -317,7 +317,7 @@ section{
     width: 90%;
 }
 .skills-content .right .Css::before{
-    width: 85%;
+    width: 75%;
 }
 .skills-content .right .Javascript::before{
     width: 70%;
@@ -325,11 +325,14 @@ section{
 .skills-content .right .PHP::before{
     width: 65%;
 }
+.skills-content .right .Laravel::before{
+    width: 60%;
+}
 .skills-content .right .React::before{
     width: 60%;
 }
 .skills-content .right .MySql::before{
-    width: 75%;
+    width: 70%;
 }
 .skills-content .right .Wordpress::before{
     width: 70%;

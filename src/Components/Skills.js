@@ -14,11 +14,12 @@ const Skills = (props) => {
             </div>
             <div className="column right">
               <Bar name="HTML" val={90} />
-              <Bar name="Css" val={85} />
+              <Bar name="Css" val={75} />
               <Bar name="Javascript" val={70} />
               <Bar name="React" val={60} />
               <Bar name="PHP" val={65} />
-              <Bar name="MySql" val={75} />
+              <Bar name="Laravel" val={60} />
+              <Bar name="MySql" val={70} />
               <Bar name="Wordpress" val={70} />
             </div>
           </div>
